@@ -5,7 +5,8 @@ class Api::V1::TeamsController < ApplicationController
 	before_action :authenticate_with_token!, only: [:create]
 
 	def index
-		respond_with Team.all
+		teams = params[:team_ids].present? ? Team.find(params[:team_ids]) : Team.all
+		respond_with teams
 	end
 
 	def show
