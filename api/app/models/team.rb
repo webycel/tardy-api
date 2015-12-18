@@ -1,3 +1,3 @@
 class Team < ActiveRecord::Base
-	attr_accessor :name
+	validates :name, :settings, :user_id, presence: true
 end
