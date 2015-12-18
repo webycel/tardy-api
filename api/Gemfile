@@ -34,7 +34,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-#Api gems
+# Api gems
 gem 'active_model_serializers'
 
 # Adds pagination to ActiveModels
