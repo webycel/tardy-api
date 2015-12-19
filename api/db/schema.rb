@@ -14,8 +14,8 @@
 ActiveRecord::Schema.define(version: 20151218154931) do
 
   create_table "members", force: :cascade do |t|
-    t.integer  "team_id"
     t.string   "name"
+    t.integer  "team_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
