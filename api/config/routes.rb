@@ -1,4 +1,6 @@
 Api::Application.routes.draw do
+  get 'rails/s'
+
   devise_for :users
 
   # Api definition
