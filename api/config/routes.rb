@@ -5,13 +5,14 @@ Api::Application.routes.draw do
   namespace :api, defaults: { format: :json} do
     scope module: :v1 do
       resources :users, :only => [:show, :create, :update, :destroy] do
-        resources :teams, :only => [:index, :create, :update, :destroy]
-        resources :members, :only => [:index, :show]
+        resources :teams, :only => [:index, :create, :show, :update, :destroy] do
+          resources :members, :only => [:index, :show, :create]
+        end
       end
       resources :sessions, :only => [:create, :destroy]
-      resources :teams, :only => [:show, :index] do
-        resources :members, :only => [:index, :show]
-      end
+      # resources :teams, :only => [:show, :index] do
+      #   resources :members, :only => [:index, :show, :create]
+      # end
     end
   end
 
