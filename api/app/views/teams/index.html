@@ -1,0 +1,14 @@
+<div class="row">
+		<div class="small-12 columns">
+
+				<ul>
+				<% @teams.each do |team, key| %>
+						<li>
+							<%#= team.name + " " + team.user_id.to_s %>
+							<%= link_to team.name, team %>
+						</li>
+				<% end %>
+				</ul>
+
+		</div>
+</div>

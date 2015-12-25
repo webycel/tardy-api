@@ -4,4 +4,8 @@ class Team < ActiveRecord::Base
 	belongs_to :user
 
 	has_many :members, dependent: :destroy
+
+	def self.from_user user_id
+		Team.where(user_id: user_id)
+	end
 end
