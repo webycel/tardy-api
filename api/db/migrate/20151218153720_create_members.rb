@@ -4,6 +4,8 @@ class CreateMembers < ActiveRecord::Migration
       # t.references :team, index: true, foreign_key: true
       t.string :name
       t.integer :team_id
+      t.integer :total_counter
+      t.integer :counter
 
       t.timestamps null: false
     end

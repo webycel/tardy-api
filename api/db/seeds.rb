@@ -6,8 +6,14 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-users = User.create([{ email: 'anthony.web91@gmail.com', password: '123123123', password_confirmation: '123123123' }])
-teams = Team.create([{ name: 'PDP', user_id: 1 }, { name: 'FEAR', user_id: 1 }])
+User.create([
+		{ email: 'anthony.web91@gmail.com', password: '123123123', password_confirmation: '123123123' },
+		{ email: 'anthony_web@web.de', password: '123123123', password_confirmation: '123123123' }
+	])
+
+Team.create([{ name: 'PDP', user_id: 1 }, { name: 'FEAR', user_id: 1 }, { name: 'Sparks', user_id: 2 }])
 
 Member.create(name: 'Anthony', team_id: 1)
-Member.create(name: 'Alex', team_id: 2)
+Member.create(name: 'Hitesh', team_id: 1)
+Member.create(name: 'Becca', team_id: 1)
+Member.create(name: 'Luca', team_id: 2)
