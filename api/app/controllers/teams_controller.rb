@@ -1,6 +1,6 @@
 class TeamsController < ApplicationController
 
-	after_filter  :authenticate_user!
+	before_action :authenticate_user!
 
 	def index
 		@teams = Team.from_user(current_user.id)

@@ -16,4 +16,4 @@ Team.create([{ name: 'PDP', user_id: 1 }, { name: 'FEAR', user_id: 1 }, { name: 
 Member.create(name: 'Anthony', team_id: 1)
 Member.create(name: 'Hitesh', team_id: 1)
 Member.create(name: 'Becca', team_id: 1)
-Member.create(name: 'Luca', team_id: 2)
+Member.create(name: 'Luca', team_id: 3)
