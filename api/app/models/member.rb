@@ -1,5 +1,5 @@
 class Member < ActiveRecord::Base
-  validates :name, :team_id, presence: true
+  validates :name, :team_id, :total_counter, :counter, presence: true
 
   belongs_to :team
 
