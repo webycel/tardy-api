@@ -16,10 +16,10 @@ ActiveRecord::Schema.define(version: 20151218154931) do
   create_table "members", force: :cascade do |t|
     t.string   "name"
     t.integer  "team_id"
-    t.integer  "total_counter"
-    t.integer  "counter"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.integer  "total_counter", default: 0
+    t.integer  "counter",       default: 0
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   add_index "members", ["team_id"], name: "index_members_on_team_id"
