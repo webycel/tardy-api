@@ -15,6 +15,8 @@ gem 'uglifier', '>= 1.3.0'
 # gem 'therubyracer', platforms: :ruby
 
 gem 'foundation-rails'
+gem 'underscore-rails'
+gem 'zepto-rails', :github => 'frontfoot/zepto-rails'
 
 gem 'devise', '~> 3.4.0'
 
