@@ -1,0 +1,17 @@
+<div class="row">
+		<div class="small-12 columns">
+				<%= @team.name %>
+		</div>
+</div>
+
+<div class="row">
+		<div class="small-12 columns">
+				<ul>
+					<% @members.each do | member | %>
+						<li>
+							<%= member.name %>
+						</li>
+					<% end %>
+				</ul>
+		</div>
+</div>
