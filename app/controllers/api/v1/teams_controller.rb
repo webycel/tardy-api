@@ -2,10 +2,10 @@ class Api::V1::TeamsController < ApplicationController
 
 	respond_to :json
 
-	before_action :authenticate_with_token!, only: [:index, :create, :update, :destroy]
+	before_action :authenticate_with_token!, only: [:create, :update, :destroy]
 
 	def index
-		teams = params[:team_ids].present? ? Team.find(params[:team_ids]) : Team.all
+		teams = params[:user_id].present? ? Team.from_user(@current_user.id) : Team.all
 		respond_with teams
 	end
 

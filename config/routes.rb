@@ -18,6 +18,7 @@ Api::Application.routes.draw do
           end
         end
       end
+      get "/teams" => "teams#index" # public
       resources :sessions, :only => [:create, :destroy]
     end
   end

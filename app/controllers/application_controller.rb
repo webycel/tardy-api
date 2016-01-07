@@ -5,4 +5,6 @@ class ApplicationController < ActionController::Base
 
   include Authenticable
 
+	before_action :init_current_user
+
 end
